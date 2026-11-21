@@ -10,7 +10,7 @@ env:
   DEVICE_CODENAME : "chiron"
 
   CUSTOM_CMDS : "CLANG_TRIPLE=aarch64-linux-gnu-"
-  EXTRA_CMDS : "LD=ld.lld LLVM=1 LLVM_IAS=1"
+  EXTRA_CMDS : "LD=ld.lld LLVM=1 LLVM_IAS=1 KCFLAGS=-Wno-error"
 
   KERNEL_SOURCE : "https://github.com/LineageOS/android_kernel_xiaomi_msm8998.git"
   KERNEL_BRANCH : "lineage-22.2"
@@ -64,7 +64,7 @@ env:
 
   REKERNEL_ENABLE: "false" # if u need Re:Kernel.
   DROIDSPACES_ENABLE: "false" # if u need Droidspaces or LXC/Docker.
-  NOMOUNT_ENABLE: "true" # if u need NoMount.
+  NOMOUNT_ENABLE: "false" # if u need NoMount.
   FGETPRIORITY_ENABLE: "false" #if u need hide getpriority.
   VPNHIDE_ENABLE: "false" #if u need hide vpn status.
 
